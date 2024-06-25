@@ -33,5 +33,5 @@ const Reacts=React.createElement(
 )
 ReactDOM.createRoot(document.getElementById('root')).
 render(
-    Reacts
+    <App/>
 )
