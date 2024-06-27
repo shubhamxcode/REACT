@@ -2,13 +2,21 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Card from './components/Card'
 
+const obj={
+  username:"shubham",
+  age:18,
+  skiil:"leaning"
+}
 function App() {
   const [count, setCount] = useState(0)
-
+ 
   return (
     <>
       <h1 className='bg-green-700 text-black rounded-xl '>TAILWIND CSS</h1>
+      <Card username="shubham" btntext="chai boys click me" />
+      <Card/>
     </>
   )
 }
@@ -16,6 +24,3 @@ function App() {
 export default App
 
 
-
-{/* <> //fragment
-</> */}
