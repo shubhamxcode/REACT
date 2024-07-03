@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback,useEffect,useState } from 'react'
 import './App.css'
 
 function App() {
@@ -18,20 +18,22 @@ function App() {
     }
     for (let i = 1; i <= length; i++) {
       let char=Math.floor(Math.random()*str.length+1)
-      pass=str.charAt(char)
+      pass+=str.charAt(char)
     }
     setpassword(pass)
   },[length,numberallowed,charallowed,setpassword])
-
+  useEffect(()=>{
+    passwordgenerator()
+  },[length,numberallowed.charallowed,passwordgenerator])
   return (
     <div className='bg-gray-700 p-20 rounded-3xl'>
       <div className='text-2xl mb-4'>password generator</div>
-      <div>
+      <div className=''>
         <input type="text" 
         value={password} 
         placeholder='password' 
         readOnly
-        className='bg-white px-36 py-2 text-center rounded-2xl'/>
+        className='bg-white px-36 py-2 text-center rounded-2xl text-orange-500'/>
         <button className='bg-indigo-500 rounded-2xl ml-2 border-none'>copy</button>
       </div>
       <div className='flex text-sm gap-x-2'>
