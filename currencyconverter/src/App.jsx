@@ -7,7 +7,6 @@ function App() {
     const [from, setFrom] = useState("usd");
     const [to, setTo] = useState("inr");
     const [convertedAmount, setConvertedAmount] = useState(0);
-
     const currencyInfo = useCurrencyInfo(from);
     const options = Object.keys(currencyInfo);
 
@@ -33,12 +32,13 @@ function App() {
                         onSubmit={(e) => {
                             e.preventDefault();
                             convert();
+                           
                         }}
                     >
                         <div className="w-full mb-1">
                             <InputBox
                                 label="From"
-                                value={amount}
+                                amount={amount}
                                 currencyoption={options}
                                 onamountchanges={(amount) => setAmount(amount)}
                                 oncurrencychange={(currency) => setFrom(currency)}
@@ -67,6 +67,7 @@ function App() {
                         </div>
                         <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
                             Convert {from.toUpperCase()} to {to.toUpperCase()}
+                            
                         </button>
                     </form>
                 </div>
