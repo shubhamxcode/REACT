@@ -14,8 +14,6 @@ function App() {
     const swap = () => {
         setFrom(to);
         setTo(from);
-        setConvertedAmount(amount);
-        setAmount(convertedAmount);
     };
 
     const convert = () => {
@@ -40,12 +38,12 @@ function App() {
                         <div className="w-full mb-1">
                             <InputBox
                                 label="From"
-                                amount={amount}
+                                value={amount}
                                 currencyoption={options}
-                                onamountchange={(value) => setAmount(value)}
+                                onamountchanges={(amount) => setAmount(amount)}
                                 oncurrencychange={(currency) => setFrom(currency)}
                                 selectcurrency={from}
-                                onamountchanges={(amount) => setAmount(amount)}
+                              
                             />
                         </div>
                         <div className="relative w-full h-0.5">
