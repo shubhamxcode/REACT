@@ -28,7 +28,7 @@ const username="react is all about j.s"
 const Reacts=React.createElement(
     'a',//tag
     {href:'https://youtube.com', target:'_blank'},
-    'go to youtube shubham sir',
+    'go to youtube shubham sir',//string
     username   
 )
 ReactDOM.createRoot(document.getElementById('root')).

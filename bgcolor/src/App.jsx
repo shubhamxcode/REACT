@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 
 function App() {
-  const [color, setcolor] = useState("olive")
+  const [color, setcolor] = useState("purple")
   return (
     <div className='w-full h-screen duration-200' style={{backgroundColor:color}}>
       <div className='fixed flex flex-wrap justify-center bottom-10 inset-x-0'>

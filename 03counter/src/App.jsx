@@ -5,7 +5,7 @@ import './App.css'
 import Card from './components/Card'
 
 const obj={
-  username:"shubham",
+  username:"hehehe",
   age:18,
   skiil:"leaning"
 }
@@ -15,8 +15,8 @@ function App() {
   return (
     <>
       <h1 className='bg-green-700 text-black rounded-xl '>TAILWIND CSS</h1>
-      <Card username="shubham" btntext="chai boys click me" />
-      <Card/>
+      <Card username="shubham" btntext="chai or code" />
+      <Card  username="LOL" btntext="varshney"/>
     </>
   )
 }

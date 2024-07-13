@@ -28,8 +28,8 @@ function App() {
   //copy
   const copytoclipboard=useCallback(()=>{
     window.navigator.clipboard.writeText(password)
-    passwordref.current?.select()
-    passwordref.current?.setSelectionRange(0,9)
+    passwordref.current.select()
+    // passwordref.current?.setSelectionRange(0,9)
   },[password])
 
 

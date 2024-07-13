@@ -1,19 +1,20 @@
 import React from 'react'
 
-export default function card({username,btntext="shubham"}) {
+export default function card({username,btntext}) {
   // console.log(username);
   return (
     <section class="py-10">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto w-full text-center md:max-w-2xl">
       <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
-        Get full access to Platform
+        Get full access to Platform 
       </h2>
       <p class="mx-auto mt-4 max-w-xl text-base leading-relaxed text-gray-600">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
         nesciunt eos facilis debitis voluptas iure consectetur odit fugit
         voluptate recusandae?
       </p>
+      {username}
     </div>
     <form action="#" method="POST" class="mx-auto mt-12 max-w-xl">
       <div class="flex flex-col items-center sm:flex-row sm:justify-center">
@@ -49,7 +50,7 @@ export default function card({username,btntext="shubham"}) {
         <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
       </svg>
       <span class="ml-2 text-sm text-gray-600">
-        Your data is complely secured with us. We don&#x27;t share with anyone.
+        Your data is complely secured with us. We dont &#x27;t share with anyone.
       </span>
     </div>
   </div>
