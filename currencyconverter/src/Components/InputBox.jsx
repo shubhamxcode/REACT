@@ -1,32 +1,32 @@
-import React, {useId} from 'react'
+import React, { useId } from 'react';
 
 function InputBox({
     label,
     amount,
-    onamountchange,
+    onamountchanges,
     oncurrencychange,
-    currencyoption=[],
-    selectcurrency='usd',
-    amountdisable=false,
-    currencydisable=false,
-
+    currencyoption = [],
+    selectcurrency = 'usd',
+    amountdisable = false,
+    currencydisable = false,
     className = "",
 }) {
-   
+    const amountinputid = useId();
 
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
             <div className="w-1/2">
-                <label  className="text-black/40 mb-2 inline-block">
+                <label htmlFor={amountinputid} className="text-black/40 mb-2 inline-block">
                     {label}
                 </label>
                 <input
+                    id={amountinputid}
                     className="outline-none w-full bg-transparent py-1.5"
                     type="number"
                     placeholder="Amount"
                     disabled={amountdisable}
                     value={amount}
-                    onChange={(e)=>{onamountchange && onamountchange(Number(e.target.value))}}
+                    onChange={(e) => { onamountchanges && onamountchanges(Number(e.target.value)) }}
                 />
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">
@@ -35,16 +35,13 @@ function InputBox({
                     className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
                     disabled={currencydisable}
                     value={selectcurrency}
-                    onChange={(e)=>{oncurrencychange && oncurrencychange(e.target.value)}}
-                    
+                    onChange={(e) => { oncurrencychange && oncurrencychange(e.target.value) }}
                 >
-                    
-                        {currencyoption.map((Currency) => (
-                            <option key={Currency} value={Currency}>
-                                {Currency}
-                            </option>
-                        ))}
-                
+                    {currencyoption.map((Currency) => (
+                        <option key={Currency} value={Currency}>
+                            {Currency}
+                        </option>
+                    ))}
                 </select>
             </div>
         </div>
@@ -52,14 +49,3 @@ function InputBox({
 }
 
 export default InputBox;
-
-
-
-
-
-
-
-
-
-
-// While looping using map, filter, reduce, for each, we should always use key attributes to increase the application's performance. Although React does not crash your application and rather gives you a warning but its a good practice.
