@@ -7,6 +7,7 @@ import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact'
 import User from './components/User/User'
+import Github, { githubinfoloader } from './components/Github/Github'
 
 
 
@@ -30,6 +31,11 @@ const router=createBrowserRouter([
       {
         path:"user/:userid",
         element:<User/>
+      },
+      {
+        loader: () => githubinfoloader(),
+        path:"github",
+        element:<Github/>
       }
     ]
   }
