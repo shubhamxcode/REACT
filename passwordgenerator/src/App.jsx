@@ -46,7 +46,7 @@ function App() {
         <input type="text" 
         value={password} 
         ref={passwordref}
-        // placeholder='password' 
+        placeholder='password' 
         readOnly
         className='bg-white px-36 py-2 text-center rounded-2xl text-orange-500'/>
         <button className='bg-indigo-500 rounded-2xl ml-2 border-none' onClick={copytoclipboard}>copy</button>

@@ -11,12 +11,12 @@ const obj={
 }
 function App() {
   const [count, setCount] = useState(0)
- 
+
   return (
     <>
-      <h1 className='bg-green-700 text-black rounded-xl '>TAILWIND CSS</h1>
-      <Card username="shubham" btntext="chai or code" />
-      <Card  username="LOL" btntext="varshney"/>
+      <h1  className='bg-green-700 text-black rounded-xl '>TAILWIND CSS</h1>
+      <Card  btntext="sher" someobj={obj}/>
+      <Card />
     </>
   )
 }
