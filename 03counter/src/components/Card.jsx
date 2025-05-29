@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function card({btntext , someobj,}) {
+export default function card({btntext , someobj}) {
   // console.log(username);
    const { username, age, skiil } = someobj || {};
   return (
@@ -16,6 +16,7 @@ export default function card({btntext , someobj,}) {
         voluptate recusandae?
       </p>
       {username}
+      {age}
     </div>
     <form action="#" method="POST" class="mx-auto mt-12 max-w-xl">
       <div class="flex flex-col items-center sm:flex-row sm:justify-center">

@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <h1  className='bg-green-700 text-black rounded-xl '>TAILWIND CSS</h1>
+      <h1 className='bg-green-700 text-black rounded-xl '>TAILWIND CSS</h1>
       <Card  btntext="sher" someobj={obj}/>
       <Card />
     </>
